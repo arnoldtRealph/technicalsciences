@@ -17,9 +17,16 @@ motivational_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/l
 img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
 img_contact_form = Image.open("IMAGES/STUDY.jpg")
 
-st.header("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
-st.title(" The AIM of Technical Sciences")
-st.write( """As you know, I'm very passionate about Technical Sciences and I hope to take you to the next level of solving Life's challenges.
+st.title("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
+st.header(" The AIM of Technical Sciences")
+st.write( """As someone who is deeply passionate about Technical Sciences, 
+I am eager to share my knowledge and skills with you to help you excel in this field. 
+My ultimate goal is to empower you to take on Life's challenges with confidence and expertise, 
+using the principles and techniques that we will explore together. 
+Through our collaborative efforts, I hope to inspire you to reach new heights 
+and discover your full potential as a problem-solver and innovator. 
+Together, we can tackle even the most complex issues 
+and create innovative solutions that make a positive impact on the world around us.
          CLICK THE FOLLOWING LINK TO DOWNLOAD MORE QUESTION PAPERS AND MEMORANDUMS""")
 st.write("[CLICK HERE >](https://play.google.com/store/apps/details?id=io.kodular.joegrapeacc.MatricGo)")
 
@@ -27,7 +34,7 @@ with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header("What is Technical Sciences")
+        st.header("What is Technical Sciences?")
         st.write("##")
         st.write(
             """As emphasized in the CAPS document,
@@ -49,9 +56,9 @@ with right_column:
 
 with st.container():
     st.write("---")
-    st.header("UP YOUR GAME")
+    st.header("UP YOUR GAME!")
     st.write("##")
-    image_column, text_column = st.columns((1, 2))
+    text_column, image_column = st.columns((1, 2))
     
     with image_column:
         st.image(img_contact_form)
@@ -59,31 +66,36 @@ with st.container():
     with text_column:
         st.subheader("5 ways to help you MASTER Technical Sciences")
         st.write("""
-1. SWITCH YOUR CELL PHONE OFF when you do your HOMEWORK !
+1. Ditch that phone, dude! It's time to slay some homework dragons!
 
-2. Study in a quiet place, away from the TV.
+2. Find your happy place (aka a peaceful, TV-free zone) and get your study groove on.
 
-3. Use Past Exam papers, this will help you get used to the way questions are asked.
+3. Wanna be an exam ninja? Practice with past papers and sharpen those skills!
 
-4. Make use of diagrams and sketches to help you interpret the questions.
+4. Don't just read the questions, draw them a picture and watch the answers magically appear!
 
-5. DO YOUR HOMEWORK DAILY !!! 
+5. DAILY HOMEWORK = DAILY PROGRESS. Let's crush this learning thing one assignment at a time! 
             """)
         
 with st.container():
     st.write("---")
     st.header("STUDY IN GROUPS")
     st.write("##")
-    image_column, text_column = st.columns((1, 2))
+    text_column, image_column = st.columns((1, 2))
 with image_column:
     st.image(img_contact_form2)
 with text_column:
     st.subheader("You can study in GROUPS to help you get better")
     st.write("""
-    1. Studying in groups can help you BOOST your confidence and also helps you to make friends.
+1. You can learn new things and get different perspectives from your peers when you study in a group.
 
-    2. If one friend struggles, there may be someone who understands a little bit more, 
-       this way you can grow together.
+2. Studying with others can help you stay motivated and on track with your academic goals.
+
+3. Working in a group can help you remember and understand concepts better.
+
+4. Collaborating with your peers can improve your critical thinking and problem-solving skills.
+
+5. Studying in a group can be less stressful and help you feel more connected with others, which can improve your overall mood and well-being.
              """)
 with st.container():
     st.write("---")
