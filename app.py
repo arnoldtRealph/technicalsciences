@@ -14,10 +14,10 @@ def load_lottieurl(url):
 
 lottie_coding = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_ybiszbil.json")
 motivational_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_kyxinydn.json")
-img_contact_form2 = Image.open("IMAGES/KLASLES1.jpg")
-img_contact_form = Image.open("IMAGES/KLASLES2.jpg")
+img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
+img_contact_form = Image.open("IMAGES/STUDY.jpg")
 
-st.subheader("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
+st.header("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
 st.title(" The AIM of Technical Sciences")
 st.write( """As you know, I'm very passionate about Technical Sciences and I hope to take you to the next level of solving Life's challenges.
          CLICK THE FOLLOWING LINK TO DOWNLOAD MORE QUESTION PAPERS AND MEMORANDUMS""")
@@ -45,7 +45,7 @@ with st.container():
             employment, citizenship, holistic and socio-economic development.""")
 
 with right_column:
-    st_lottie(lottie_coding, height = 300 , key="coding")
+    st_lottie(lottie_coding, height = 350 , key="coding")
 
 with st.container():
     st.write("---")
@@ -54,12 +54,12 @@ with st.container():
     image_column, text_column = st.columns((1, 2))
     
     with image_column:
-        st.image(img_contact_form2)
+        st.image(img_contact_form)
         
     with text_column:
         st.subheader("5 ways to help you MASTER Technical Sciences")
         st.write("""
-1. SWITCH YOUR CELL PHONE OFF when you do your HOMEWROK !
+1. SWITCH YOUR CELL PHONE OFF when you do your HOMEWORK !
 
 2. Study in a quiet place, away from the TV.
 
@@ -76,7 +76,7 @@ with st.container():
     st.write("##")
     image_column, text_column = st.columns((1, 2))
 with image_column:
-    st.image(img_contact_form)
+    st.image(img_contact_form2)
 with text_column:
     st.subheader("You can study in GROUPS to help you get better")
     st.write("""
@@ -103,7 +103,7 @@ Success is no accident. It is hard work, perseverance, learning, studying, sacri
 "Believe you can and you're halfway there." - Theodore Roosevelt""")
 
 with right_column:
-    st_lottie(motivational_lottie,height= 300, key ="website")
+    st_lottie(motivational_lottie,height= 350, key ="website")
 
 with st.container():
     st.write("---")
