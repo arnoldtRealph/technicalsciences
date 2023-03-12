@@ -18,16 +18,14 @@ img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
 img_contact_form = Image.open("IMAGES/STUDY.jpg")
 
 st.title("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
+st.subheader("Welcome to my website")
 st.header(" The AIM of Technical Sciences")
-st.write( """As someone who is deeply passionate about Technical Sciences, 
-I am eager to share my knowledge and skills with you to help you excel in this field. 
-My ultimate goal is to empower you to take on Life's challenges with confidence and expertise, 
-using the principles and techniques that we will explore together. 
-Through our collaborative efforts, I hope to inspire you to reach new heights 
-and discover your full potential as a problem-solver and innovator. 
-Together, we can tackle even the most complex issues 
-and create innovative solutions that make a positive impact on the world around us.
-         CLICK THE FOLLOWING LINK TO DOWNLOAD MORE QUESTION PAPERS AND MEMORANDUMS""")
+st.write( """My goal is to share my passion and skills in Technical Sciences to help you excel. 
+I aim to empower you to confidently take on Life's challenges using principles and techniques we'll explore together. 
+Together, we'll reach new heights, solve the most complex issues, 
+and create innovative solutions that have a positive impact on the world.
+
+CLICK THE FOLLOWING LINK TO DOWNLOAD MORE QUESTION PAPERS AND MEMORANDUMS""")
 st.write("[CLICK HERE >](https://play.google.com/store/apps/details?id=io.kodular.joegrapeacc.MatricGo)")
 
 with st.container():
