@@ -2,6 +2,7 @@ from PIL import Image
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
+from streamlit_option_menu import option_menu
 
 
 st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
@@ -16,6 +17,9 @@ lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_i9
 motivational_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_kyxinydn.json")
 img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
 img_contact_form = Image.open("IMAGES/STUDY.jpg")
+
+
+             
 
 st.title("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
 st.subheader("Welcome to my website")
@@ -95,6 +99,26 @@ with text_column:
 
 5. Studying in a group can be less stressful and help you feel more connected with others, which can improve your overall mood and well-being.
              """)
+
+
+with st.container():
+    st.write("---")
+    st.title("GRADE 12 RESOURCES")
+    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
+    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1-OdRq6OwkDopuIZsSknbD9ipvRwFm1LJ?usp=share_link)")
+
+with st.container():
+    st.write("---")
+    st.title("GRADE 11 RESOURCES")
+    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
+    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1Bu5kOYvpsZ6JkSSgKcsVFtzAnpd6GcAs?usp=share_link)")
+
+with st.container():
+    st.write("---")
+    st.title("GRADE 10 RESOURCES")
+    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
+    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1U7EkFEwMrJPpAjN-4xX9VdoHWjy7340p?usp=share_link)")
+
 with st.container():
     st.write("---")
 st.header(" MOTIVATIONAL QUOTES :thought_balloon:")
@@ -111,9 +135,12 @@ Success is no accident. It is hard work, perseverance, learning, studying, sacri
 "The difference between try and triumph is just a little umph!" - Marvin Phillips
 
 "Believe you can and you're halfway there." - Theodore Roosevelt""")
+    
+
 
 with right_column:
     st_lottie(motivational_lottie,height= 350, key ="website")
+ 
 
 with st.container():
     st.write("---")
