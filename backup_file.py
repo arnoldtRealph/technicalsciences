@@ -1,77 +1,11 @@
-import streamlit as st
-st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
-
 from PIL import Image
 import requests
+import streamlit as st
 from streamlit_lottie import st_lottie
-from streamlit import components
-
-st.markdown(
-    """
-    <style>
-        [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-            background-color: #800000;
-            color: white;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 
 
-
-# Define sidebar options
-menu_options = {
-    "Home": "🏠",
-    "Grade 12": "🎓",
-    "Grade 11": "🎓",
-    "Grade 10": "🎓"
-}
-
-# Set sidebar font to Arial
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        font-family: 'Arial';
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Render sidebar
-menu_selection = st.sidebar.radio("SELECT YOUR GRADE", list(menu_options.keys()), index=0, format_func=lambda x: f"{menu_options[x]} {x}")
-
-# Render content based on sidebar selection
-if menu_selection == "Home":
-    st.title("Welcome to the Home page!")
-    st.write("Please make use of the Sidebar on the left to take you directly to your study material")
-
-elif menu_selection == "Grade 12":
-    st.title("GRADE 12 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1-OdRq6OwkDopuIZsSknbD9ipvRwFm1LJ?usp=share_link)")
-
-elif menu_selection == "Grade 11":
-    st.title("GRADE 11 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1Bu5kOYvpsZ6JkSSgKcsVFtzAnpd6GcAs?usp=share_link)")
-
-elif menu_selection == "Grade 10":
-    st.title("GRADE 10 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1U7EkFEwMrJPpAjN-4xX9VdoHWjy7340p?usp=share_link)")
-
-
-
-
-
-
-
-
-
+st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -85,6 +19,7 @@ img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
 img_contact_form = Image.open("IMAGES/STUDY.jpg")
 
 
+             
 
 st.title("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
 st.subheader("Welcome to my website")
