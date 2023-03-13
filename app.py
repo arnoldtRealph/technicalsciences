@@ -15,63 +15,7 @@ st.markdown(
         }
     </style>
     """,
-    unsafe_allow_html=True
-)
-
-
-
-
-# Define sidebar options
-menu_options = {
-    "Home": "🏠",
-    "Grade 12": "🎓",
-    "Grade 11": "🎓",
-    "Grade 10": "🎓"
-}
-
-# Set sidebar font to Arial
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        font-family: 'Arial';
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-# Render sidebar
-menu_selection = st.sidebar.radio("SELECT YOUR GRADE", list(menu_options.keys()), index=0, format_func=lambda x: f"{menu_options[x]} {x}")
-
-# Render content based on sidebar selection
-if menu_selection == "Home":
-    st.title("Welcome to the Home page!")
-    st.write("Please make use of the Sidebar on the left to take you directly to your study material")
-
-elif menu_selection == "Grade 12":
-    st.title("GRADE 12 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1-OdRq6OwkDopuIZsSknbD9ipvRwFm1LJ?usp=share_link)")
-
-elif menu_selection == "Grade 11":
-    st.title("GRADE 11 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1Bu5kOYvpsZ6JkSSgKcsVFtzAnpd6GcAs?usp=share_link)")
-
-elif menu_selection == "Grade 10":
-    st.title("GRADE 10 RESOURCES")
-    st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
-    st.write("[CLICK HERE >](https://drive.google.com/drive/folders/1U7EkFEwMrJPpAjN-4xX9VdoHWjy7340p?usp=share_link)")
-
-
-
-
-
-
-
-
-
+    unsafe_allow_html=True)
 
 def load_lottieurl(url):
     r = requests.get(url)
@@ -93,9 +37,7 @@ st.write( """My goal is to share my passion and skills in Technical Sciences to 
 I aim to empower you to confidently take on Life's challenges using principles and techniques we'll explore together. 
 Together, we'll reach new heights, solve the most complex issues, 
 and create innovative solutions that have a positive impact on the world.
-
-CLICK THE FOLLOWING LINK TO DOWNLOAD MORE QUESTION PAPERS AND MEMORANDUMS""")
-st.write("[CLICK HERE >](https://play.google.com/store/apps/details?id=io.kodular.joegrapeacc.MatricGo)")
+""")
 
 with st.container():
     st.write("---")
@@ -132,8 +74,8 @@ with st.container():
         
     with text_column:
         st.subheader("5 ways to help you MASTER Technical Sciences")
-        st.write("""
-1. Ditch that phone, dude! It's time to slay some homework dragons!
+        st.write("""""
+1. Ditch that phone, dude! It is time to slay some homework dragons!
 
 2. Find your happy place (aka a peaceful, TV-free zone) and get your study groove on.
 
