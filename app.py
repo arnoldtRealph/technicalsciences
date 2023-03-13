@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 
 
+
 st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
 
 def load_lottieurl(url):
@@ -146,6 +147,8 @@ with st.container():
     st.header("THANK YOU")
     st.subheader("More coming soon...")
     st.write("Designed by Mr. Visagie at Saul Damon High School")
+
+
 
 
 
