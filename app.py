@@ -13,7 +13,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_i9mtrven.json")
+lottie_coding = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_nzw3czxk.json")
 motivational_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_kyxinydn.json")
 img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
 img_contact_form = Image.open("IMAGES/Study_methods.jpg")
