@@ -5,7 +5,6 @@ from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
 from streamlit import components
-from streamlit_option_menu import option_menu
 
 
 def load_lottieurl(url):
