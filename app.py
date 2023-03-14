@@ -5,18 +5,8 @@ from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
 from streamlit import components
+from streamlit_option_menu import option_menu
 
-
-st.markdown(
-    """
-    <style>
-        [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-            background-color: #800000;
-            color: white;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True)
 
 def load_lottieurl(url):
     r = requests.get(url)
