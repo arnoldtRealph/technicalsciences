@@ -6,6 +6,7 @@ import requests
 from streamlit_lottie import st_lottie
 from streamlit import components
 
+
 st.markdown(
     """
     <style>
@@ -26,7 +27,7 @@ def load_lottieurl(url):
 lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_i9mtrven.json")
 motivational_lottie = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_kyxinydn.json")
 img_contact_form2 = Image.open("IMAGES/GROUP WORK.jpg")
-img_contact_form = Image.open("IMAGES/STUDY.jpg")
+img_contact_form = Image.open("IMAGES/study_methods.jpg")
 
 
 
@@ -67,14 +68,9 @@ with st.container():
     st.write("---")
     st.header("UP YOUR GAME!")
     st.write("##")
-    text_column, image_column = st.columns((1, 2))
-    
-    with image_column:
-        st.image(img_contact_form)
-        
-    with text_column:
-        st.subheader("5 ways to help you MASTER Technical Sciences")
-        st.write("""
+    st.image(img_contact_form)
+    st.subheader("5 ways to help you MASTER Technical Sciences")
+    st.write("""
 1. Ditch that phone, dude! It is time to slay some homework dragons!
 
 2. Find your happy place (aka a peaceful, TV-free zone) and get your study groove on.
@@ -90,10 +86,6 @@ with st.container():
     st.write("---")
     st.header("STUDY IN GROUPS")
     st.write("##")
-    text_column, image_column = st.columns((1, 2))
-with image_column:
-    st.image(img_contact_form2)
-with text_column:
     st.subheader("You can study in GROUPS to help you get better")
     st.write("""
 1. You can learn new things and get different perspectives from your peers when you study in a group.
@@ -106,6 +98,8 @@ with text_column:
 
 5. Studying in a group can be less stressful and help you feel more connected with others, which can improve your overall mood and well-being.
              """)
+    st.image(img_contact_form2)
+    
 
 
 with st.container():
