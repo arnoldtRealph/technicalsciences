@@ -33,10 +33,10 @@ img_contact_form = Image.open("IMAGES/STUDY.jpg")
 st.title("Hi, I'm Mr. Visagie, your Technical Sciences teacher :wave:")
 st.subheader("Welcome to my website")
 st.header(" The AIM of Technical Sciences")
-st.write( """My goal is to share my passion and skills in Technical Sciences to help you excel. 
-I aim to empower you to confidently take on Life's challenges using principles and techniques we'll explore together. 
-Together, we'll reach new heights, solve the most complex issues, 
-and create innovative solutions that have a positive impact on the world.
+st.write( """Let's embark on a journey together where I'll be your guide in Technical Sciences! 
+My mission is to help you shine by sharing my passion and skills, so you can confidently tackle any challenge
+life throws at you. With our powers combined, we'll soar to new heights, unravel the toughest problems,
+ and craft cutting-edge solutions that'll make the world a better place! Are you ready to dive in?
 """)
 
 with st.container():
@@ -74,7 +74,7 @@ with st.container():
         
     with text_column:
         st.subheader("5 ways to help you MASTER Technical Sciences")
-        st.write("""""
+        st.write("""
 1. Ditch that phone, dude! It is time to slay some homework dragons!
 
 2. Find your happy place (aka a peaceful, TV-free zone) and get your study groove on.
