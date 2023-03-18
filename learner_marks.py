@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import streamlit as st
+import openpyxl
 
 # Set the path to the Excel sheet
 file_path = os.path.join(os.getcwd(), "data", "student_marks.xlsx")
