@@ -5,13 +5,8 @@ from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
 from streamlit import components
-import os
-import pandas as pd
 
 
-
-
-# The site without any updates
 def load_lottieurl(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -33,40 +28,6 @@ My mission is to help you shine by sharing my passion and skills, so you can con
 life throws at you. With our powers combined, we'll soar to new heights, unravel the toughest problems,
  and craft cutting-edge solutions that'll make the world a better place! Are you ready to dive in?
 """)
-
-
-# Create a header
-st.header('Please fill out this information')
-
-# Create input fields for user information
-name = st.text_input("Name:")
-surname = st.text_input("Surname:")
-grade = st.selectbox("What grade are you in?", ["10", "11", "12"])
-selection = st.selectbox("What are you looking for?", ["Study material", "Past papers", "Local information"])
-comment = st.text_area("Leave a comment:")
-
-# Create a dictionary to store user information
-user_info = {
-    "Name": name,
-    "Surname": surname,
-    "Grade": grade,
-    "Selection": selection,
-    "Comment": comment
-}
-
-# Create a pandas DataFrame from user information
-user_df = pd.DataFrame(user_info, index=[0])
-
-# Export user information to Excel
-try:
-    with pd.ExcelWriter('~/Desktop/Output/Output.xlsx', mode='a', engine='openpyxl') as writer:
-        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
-except FileNotFoundError:
-    with pd.ExcelWriter('Output.xlsx', engine='openpyxl') as writer:
-        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=True)
-
-# Display confirmation message
-st.write("Your information has been saved. Please continue to your required section")
 
 with st.container():
     st.write("---")

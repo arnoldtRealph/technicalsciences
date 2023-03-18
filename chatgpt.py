@@ -1,18 +1,38 @@
-import openai
 import streamlit as st
+import pandas as pd
 
-# Set up OpenAI API credentials
-openai.api_key = "YOUR_API_KEY"
+# Set the title of the website
+st.set_page_config(page_title='Technical Sciences')
 
-# Define the title and subtitle of the app
-st.title("What is ChatGPT?")
-st.subheader("A brief explanation of OpenAI's language model")
+# Create a header
+st.header('Please fill out this information')
 
-# Define a prompt to send to ChatGPT
-prompt = "What is ChatGPT?"
+# Create input fields for user information
+name = st.text_input("Name:")
+surname = st.text_input("Surname:")
+grade = st.selectbox("What grade are you in?", ["10", "11", "12"])
+selection = st.selectbox("What are you looking for?", ["Study material", "Past papers", "Local information"])
+comment = st.text_area("Leave a comment:")
 
-# Send the prompt to the GPT-3 API
-response = openai.Completion.create(engine="davinci", prompt=prompt, max_tokens=100)
+# Create a dictionary to store user information
+user_info = {
+    "Name": name,
+    "Surname": surname,
+    "Grade": grade,
+    "Selection": selection,
+    "Comment": comment
+}
 
-# Display the response from ChatGPT
-st.write(response.choices[0].text)
+# Create a pandas DataFrame from user information
+user_df = pd.DataFrame(user_info, index=[0])
+
+# Export user information to Excel
+try:
+    with pd.ExcelWriter('~/Desktop/Output/Output.xlsx', mode='a', engine='openpyxl') as writer:
+        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
+except FileNotFoundError:
+    with pd.ExcelWriter('Output.xlsx', engine='openpyxl') as writer:
+        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=True)
+
+# Display confirmation message
+st.write("Your information has been saved. Thank you for using our website!")
