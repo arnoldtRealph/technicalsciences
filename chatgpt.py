@@ -1,7 +1,3 @@
-import streamlit as st
-import pandas as pd
-
-# Set the title of the website
 st.set_page_config(page_title='Technical Sciences')
 
 # Create a header
@@ -28,11 +24,12 @@ user_df = pd.DataFrame(user_info, index=[0])
 
 # Export user information to Excel
 try:
-    with pd.ExcelWriter('~/Desktop/Output/Output.xlsx', mode='a', engine='openpyxl') as writer:
+    with pd.ExcelWriter('~/Desktop/Output/Output.xlsx', mode='a', engine='openpyxl', if_sheet_exists='new') as writer:
         user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
 except FileNotFoundError:
     with pd.ExcelWriter('Output.xlsx', engine='openpyxl') as writer:
         user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=True)
 
 # Display confirmation message
-st.write("Your information has been saved. Thank you for using our website!")
+st.write("Your information has been saved. Thank you for using my website!")
+

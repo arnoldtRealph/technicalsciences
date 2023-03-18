@@ -35,6 +35,9 @@ life throws at you. With our powers combined, we'll soar to new heights, unravel
 """)
 
 
+import os.path
+from openpyxl import load_workbook
+
 # Create a header
 st.header('Please fill out this information')
 
@@ -57,16 +60,26 @@ user_info = {
 # Create a pandas DataFrame from user information
 user_df = pd.DataFrame(user_info, index=[0])
 
-# Export user information to Excel
-try:
-    with pd.ExcelWriter('~/Desktop/Output/Output.xlsx', mode='a', engine='openpyxl') as writer:
-        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
-except FileNotFoundError:
-    with pd.ExcelWriter('Output.xlsx', engine='openpyxl') as writer:
-        user_df.to_excel(writer, sheet_name='Sheet1', index=False, header=True)
+# Check if the Excel file already exists
+if os.path.isfile('Output.xlsx'):
+    # Load the existing Excel file into a pandas DataFrame
+    existing_df = pd.read_excel('Output.xlsx', sheet_name='Sheet1')
+    
+    # Append the new data to the existing DataFrame
+    combined_df = existing_df.append(user_df, ignore_index=True)
+    
+    # Write the combined DataFrame to the Excel file, overwriting the existing sheet
+    combined_df.to_excel('Output.xlsx', sheet_name='Sheet1', index=False)
+else:
+    # Write the new data to a new Excel file with a header row
+    user_df.to_excel('Output.xlsx', sheet_name='Sheet1', index=False, header=True)
 
 # Display confirmation message
 st.write("Your information has been saved. Please continue to your required section")
+
+
+
+
 
 with st.container():
     st.write("---")
