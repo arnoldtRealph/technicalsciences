@@ -36,50 +36,6 @@ life throws at you. With our powers combined, we'll soar to new heights, unravel
 
 
 import os.path
-from openpyxl import load_workbook
-
-# Create a header
-st.header('Please fill out this information')
-
-# Create input fields for user information
-name = st.text_input("Name:")
-surname = st.text_input("Surname:")
-grade = st.selectbox("What grade are you in?", ["10", "11", "12"])
-selection = st.selectbox("What are you looking for?", ["Study material", "Past papers", "Local information"])
-comment = st.text_area("Leave a comment:")
-
-# Create a dictionary to store user information
-user_info = {
-    "Name": name,
-    "Surname": surname,
-    "Grade": grade,
-    "Selection": selection,
-    "Comment": comment
-}
-
-# Create a pandas DataFrame from user information
-user_df = pd.DataFrame(user_info, index=[0])
-
-# Check if the Excel file already exists
-if os.path.isfile('Output.xlsx'):
-    # Load the existing Excel file into a pandas DataFrame
-    existing_df = pd.read_excel('Output.xlsx', sheet_name='Sheet1')
-    
-    # Combine the existing and new DataFrames using concat
-    combined_df = pd.concat([existing_df, user_df], ignore_index=True)
-    
-    # Write the combined DataFrame to the Excel file, overwriting the existing sheet
-    combined_df.to_excel('Output.xlsx', sheet_name='Sheet1', index=False)
-else:
-    # Write the new data to a new Excel file with a header row
-    user_df.to_excel('Output.xlsx', sheet_name='Sheet1', index=False, header=True)
-
-# Display confirmation message
-st.write("Your information has been saved. Please continue to your required section")
-
-
-
-
 
 
 with st.container():
