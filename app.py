@@ -65,8 +65,8 @@ if os.path.isfile('Output.xlsx'):
     # Load the existing Excel file into a pandas DataFrame
     existing_df = pd.read_excel('Output.xlsx', sheet_name='Sheet1')
     
-    # Append the new data to the existing DataFrame
-    combined_df = existing_df.append(user_df, ignore_index=True)
+    # Combine the existing and new DataFrames using concat
+    combined_df = pd.concat([existing_df, user_df], ignore_index=True)
     
     # Write the combined DataFrame to the Excel file, overwriting the existing sheet
     combined_df.to_excel('Output.xlsx', sheet_name='Sheet1', index=False)
@@ -76,6 +76,7 @@ else:
 
 # Display confirmation message
 st.write("Your information has been saved. Please continue to your required section")
+
 
 
 
