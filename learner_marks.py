@@ -1,8 +1,12 @@
+import os
 import pandas as pd
 import streamlit as st
 
+# Set the path to the Excel sheet
+file_path = os.path.join(os.getcwd(), "data", "student_marks.xlsx")
+
 # Load the Excel sheet
-df = pd.read_excel("student_marks.xlsx")
+df = pd.read_excel(file_path)
 
 # Convert columns to string type
 df["Name"] = df["Name"].astype(str)
