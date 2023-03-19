@@ -5,7 +5,12 @@ import openpyxl
 # Load the data
 data_folder = "data/"
 excel_file = "student_marks.xlsx"
-df = pd.read_excel(excel_file)
+
+try:
+    df = pd.read_excel(excel_file)
+except ModuleNotFoundError:
+    st.error("Error: Required module 'openpyxl' not found. Please install it using pip or conda.")
+    st.stop()
 
 # Set up the Streamlit app
 st.title("Learner Marks Lookup")
