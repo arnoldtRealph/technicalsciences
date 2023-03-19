@@ -1,11 +1,10 @@
-import openpyxl
+import pandas as pd
 import streamlit as st
 
 # Load the data
 data_folder = "data/"
 excel_file = "student_marks.xlsx"
-workbook = openpyxl.load_workbook(data_folder + excel_file)
-sheet = workbook.active
+df = pd.read_excel(data_folder + excel_file)
 
 # Set up the Streamlit app
 st.title("Learner Marks Lookup")
@@ -16,13 +15,12 @@ password = st.text_input("Password:", type="password")
 
 # Add a button to submit the inputs
 if st.button("Submit"):
-    # Loop through each row in the sheet
-    for row in sheet.iter_rows(min_row=2, values_only=True):
-        # Check if the name and password match the current row
-        if name == row[0] and password == row[1]:
-            # Display the learner's mark
-            st.success(f"Your mark is {row[2]}.")
-            break
+    # Check if the name and password match any rows in the dataframe
+    match = df[(df['Name'] == name) & (df['Password'] == password)]
+    if not match.empty:
+        # Display the learner's mark
+        mark = match.iloc[0]['Mark']
+        st.success(f"Your mark is {mark}.")
     else:
         # Display an error message if the name and password don't match any rows
         st.error("Invalid name or password.")
