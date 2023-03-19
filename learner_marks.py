@@ -3,7 +3,7 @@ import streamlit as st
 
 # Load the data
 data_folder = "data/"
-excel_file = "learner_marks.xlsx"
+excel_file = "student_marks.xlsx"
 workbook = openpyxl.load_workbook(data_folder + excel_file)
 sheet = workbook.active
 
