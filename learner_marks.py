@@ -6,10 +6,10 @@ from openpyxl import load_workbook
 # Set the path to the Excel sheet
 file_path = os.path.join(os.getcwd(), "data", "student_marks.xlsx")
 
-# Load the Excel sheet using openpyxl engine
+# Load the Excel sheet
 book = load_workbook(file_path, read_only=True)
-ws = book.active
-data = ws.values
+sheet = book.active
+data = sheet.values
 columns = next(data)
 df = pd.DataFrame(data, columns=columns)
 
