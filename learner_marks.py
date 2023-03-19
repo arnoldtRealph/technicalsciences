@@ -1,12 +1,17 @@
 import os
 import pandas as pd
 import streamlit as st
+from openpyxl import load_workbook
 
 # Set the path to the Excel sheet
 file_path = os.path.join(os.getcwd(), "data", "student_marks.xlsx")
 
-# Load the Excel sheet
-df = pd.read_excel(file_path, engine='openpyxl')
+# Load the Excel sheet using openpyxl engine
+book = load_workbook(file_path, read_only=True)
+ws = book.active
+data = ws.values
+columns = next(data)
+df = pd.DataFrame(data, columns=columns)
 
 # Convert columns to string type
 df["Name"] = df["Name"].astype(str)
