@@ -7,7 +7,7 @@ excel_file = "student_marks.xlsx"
 df = pd.read_excel(data_folder + excel_file)
 
 # Set up the Streamlit app
-st.title("Learner Marks Lookup")
+st.title("Technical Sciences March test Results: March 2023")
 
 # Add input fields for name and password
 name = st.text_input("Name:")
@@ -19,7 +19,7 @@ if st.button("Submit"):
     result = df[(df["Name"]==name) & (df["Password"]==password)]
     if len(result) > 0:
         # Display the learner's mark
-        st.success(f"Your mark is {result.iloc[0]['Marks']}.")
+        st.success(f"Your mark is {result.iloc[0]['Marks']} out of 100.")
     else:
         # Display an error message if the name and password don't match
         st.error("Invalid name or password.")
