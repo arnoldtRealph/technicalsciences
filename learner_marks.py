@@ -19,7 +19,7 @@ if st.button("Submit"):
     match = df[(df['Name'] == name) & (df['Password'] == password)]
     if not match.empty:
         # Display the learner's mark
-        mark = match.iloc[0]['Mark']
+        mark = match.iloc[0]['Marks']
         st.success(f"Your mark is {mark}.")
     else:
         # Display an error message if the name and password don't match any rows
