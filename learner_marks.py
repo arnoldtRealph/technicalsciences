@@ -1,10 +1,12 @@
 import pandas as pd
 import streamlit as st
 
+
+
 # Load the data
 data_folder = "data/"
 excel_file = "student_marks.xlsx"
-df = pd.read_excel(data_folder + excel_file)
+df = pd.read_excel(excel_file)
 
 # Set up the Streamlit app
 st.title("Learner Marks Lookup")
