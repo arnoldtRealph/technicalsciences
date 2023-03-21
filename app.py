@@ -9,8 +9,6 @@ import os
 import pandas as pd
 
 
-
-
 # The site without any updates
 def load_lottieurl(url):
     r = requests.get(url)
