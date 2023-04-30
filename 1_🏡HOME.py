@@ -7,7 +7,7 @@ from streamlit_lottie import st_lottie
 from streamlit import components
 import os
 import pandas as pd
-
+from datetime import datetime
 
 # The site without any updates
 def load_lottieurl(url):
@@ -142,7 +142,35 @@ Success is no accident. It is hard work, perseverance, learning, studying, sacri
 with right_column:
     st_lottie(motivational_lottie,height= 350, key ="website")
  
+#Temperature widget
 
+latitude = st.secrets["latitude"]
+longitude = st.secrets["longitude"]
+API_KEY = st.secrets["API_KEY"]
+
+url = f'https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={API_KEY}'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    temperature = data['main']['temp'] - 273.15  # Convert from Kelvin to Celsius
+    description = data['weather'][0]['description']
+    icon_code = data['weather'][0]['icon']
+    icon_url = f"http://openweathermap.org/img/w/{icon_code}.png"
+
+    st.title("Upington Weather")
+    st.write(f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    st.image(icon_url, width=100)
+    st.markdown(f'<p style="color: #F2C94C;">{temperature:.1f}°C</p>', unsafe_allow_html=True)
+    st.markdown(f'<p style="color: #F2C94C;">{description.capitalize()}</p>', unsafe_allow_html=True)
+    st.markdown('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+else:
+    st.write('Error retrieving temperature data.')
+
+
+
+# End of page
 with st.container():
     st.write("---")
     st.header("THANK YOU")
