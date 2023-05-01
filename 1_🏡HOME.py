@@ -169,8 +169,6 @@ else:
     st.write('Error retrieving temperature data.')
 
 
-
-# End of page
 with st.container():
     st.write("---")
     st.header("THANK YOU")
