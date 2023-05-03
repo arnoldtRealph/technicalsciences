@@ -1,6 +1,4 @@
 import streamlit as st
-st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
-
 from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
@@ -9,6 +7,9 @@ import os
 import pandas as pd
 from datetime import datetime
 
+st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
+
+st.success("👈Thank you for visiting my site. Check out the sidebar for more info!")
 # The site without any updates
 def load_lottieurl(url):
     r = requests.get(url)
