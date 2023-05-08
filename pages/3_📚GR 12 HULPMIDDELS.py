@@ -1,4 +1,11 @@
 import streamlit as st
+from PIL import Image
+
+img_plot = Image.open("IMAGES/newplot.png")
+
+st.subheader("HIER IS DIE MAART-UITSLAE PER LEERDER")
+st.image(img_plot)
+
 
 st.title("GRADE 12 RESOURCES")
 st.subheader("Click on the following link to GET ACCESS to your STUDY MATERIAL.")
