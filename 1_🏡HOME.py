@@ -7,7 +7,7 @@ import os
 import pandas as pd
 from datetime import datetime
 
-st.set_page_config(page_title= "My Webpage", page_icon=":tada:", layout= "wide")
+st.set_page_config(page_title= "TECHSCI", layout= "wide")
 
 st.success("👈Thank you for visiting my site. Check out the sidebar for more info!")
 # The site without any updates
