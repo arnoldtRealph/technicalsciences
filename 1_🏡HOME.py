@@ -31,10 +31,10 @@ st.image(img_home)
 st.subheader("Welcome to my website")
 st.write("---")
 st.header(" The AIM of Technical Sciences")
-st.write( """Let's embark on a journey together where I'll be your guide in Technical Sciences! 
+st.markdown( """**Let's embark on a journey together where I'll be your guide in Technical Sciences! 
 My mission is to help you shine by sharing my passion and skills, so you can confidently tackle any challenge
 life throws at you. With our powers combined, we'll soar to new heights, unravel the toughest problems,
- and craft cutting-edge solutions that'll make the world a better place! Are you ready to dive in?
+ and craft cutting-edge solutions that'll make the world a better place! Are you ready to dive in?**
 """)
 
 
@@ -47,8 +47,8 @@ with st.container():
     with left_column:
         st.header("What is Technical Sciences?")
         st.write("##")
-        st.write(
-            """As emphasized in the CAPS document,
+        st.markdown(
+            """_As emphasized in the CAPS document,
             Technical Sciences support learners in the three focus areas of technology, namely:
             Mechanical, 
             Electrical and 
@@ -60,7 +60,7 @@ with st.container():
             the technology subjects by being an enabling subject 
             to promote technology studies in schools.
             Technical Sciences aim to prepare learners for further education and training,
-            employment, citizenship, holistic and socio-economic development.""")
+            employment, citizenship, holistic and socio-economic development._""")
 
 with right_column:
     st_lottie(lottie_coding, height = 350 , key="coding")
@@ -71,16 +71,17 @@ with st.container():
     st.write("##")
     st.image(img_contact_form)
     st.subheader("5 ways to help you MASTER Technical Sciences")
-    st.write("""
-1. Ditch that phone, dude! It is time to slay some homework dragons!
+    st.markdown("""
 
-2. Find your happy place (aka a peaceful, TV-free zone) and get your study groove on.
+     - Instead of getting distracted by your phone, **:blue[let's focus on finishing some homework challenges]**.
 
-3. Wanna be an exam ninja? Practice with past papers and sharpen those skills!
+     - Find a quiet, peaceful place where you feel comfortable studying **:red[without any distractions]**, such as watching TV.
 
-4. Don't just read the questions, draw them a picture and watch the answers magically appear!
+     - Want to excel in your exams? Practice by **:green[solving problems from previous papers]** and improve your skills!
 
-5. DAILY HOMEWORK = DAILY PROGRESS. Let's crush this learning thing one assignment at a time! 
+     - Instead of just reading the questions, try to **:blue[draw them out]** to help you **:blue[visualize]** and solve the problems more easily!
+
+     - :green[Completing your daily homework is essential for your academic progress]. Let's work hard and aim for success, one assignment at a time! 
             """)
         
 with st.container():
@@ -88,16 +89,16 @@ with st.container():
     st.header("STUDY IN GROUPS")
     st.write("##")
     st.subheader("You can study in GROUPS to help you get better")
-    st.write("""
-1. You can learn new things and get different perspectives from your peers when you study in a group.
+    st.markdown("""
+- You can learn new things and get **:blue[different perspectives]** from your peers when you study in a group.
 
-2. Studying with others can help you stay motivated and on track with your academic goals.
+- Studying with others can help you **:red[stay motivated]** and on track with your academic goals.
 
-3. Working in a group can help you remember and understand concepts better.
+- Working in a group can **:green[help you remember]** and understand concepts better.
 
-4. Collaborating with your peers can improve your critical thinking and problem-solving skills.
+- Collaborating with your peers can **:blue[improve your critical thinking]** and **:green[problem-solving skills]**.
 
-5. Studying in a group can be less stressful and help you feel more connected with others, which can improve your overall mood and well-being.
+- Studying in a group can be **:green[less stressful]** and help you **:green[feel more connected with others]**, which can improve your overall mood and well-being.
              """)
     st.image(img_contact_form2)
     
@@ -127,16 +128,16 @@ st.header(" MOTIVATIONAL QUOTES :thought_balloon:")
 st.write("##")
 left_column, right_column = st.columns(2)
 with left_column:
-    st.write("""
-Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do." - Pele
+    st.markdown("""
+- :green[Success is no accident. It is hard work, perseverance, learning, studying, sacrifice, and most of all, love of what you are doing or learning to do."] - :red[Pele]
 
-"You don't have to be great to start, but you have to start to be great." - Zig Ziglar
+- :blue["You don't have to be great to start, but you have to start to be great."] - :red[Zig Ziglar]
 
-"The expert in anything was once a beginner." - Helen Hayes
+- :green["The expert in anything was once a beginner."] - :red[Helen Hayes]
 
-"The difference between try and triumph is just a little umph!" - Marvin Phillips
+- :blue["The difference between try and triumph is just a little umph!"] - :red[Marvin Phillips]
 
-"Believe you can and you're halfway there." - Theodore Roosevelt""")
+- :green["Believe you can and you're halfway there."] - :red[Theodore Roosevelt]""")
     
 
 
