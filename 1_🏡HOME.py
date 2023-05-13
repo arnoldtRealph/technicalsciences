@@ -7,8 +7,16 @@ import os
 import pandas as pd
 from datetime import datetime
 import streamlit.components.v1 as components
+import mixpanel
 
 st.set_page_config(page_title= "TECHSCI", layout= "wide")
+
+#mixpanel token
+mixpanel_token = os.environ.get('MIXPANEL_TOKEN')
+
+
+
+
 
 st.success("👈Thank you for visiting my site. Check out the sidebar for more info!")
 # The site without any updates
@@ -221,10 +229,11 @@ button:hover {
   padding-left: 30px;
 }
 </style>
-<button onclick="window.open('https://drive.google.com/drive/folders/1U7EkFEwMrJPpAjN-4xX9VdoHWjy7340p?usp=share_link&utm_source=Google+Drive&utm_medium=Shared+link&utm_campaign=Grade+10+Streamlit&utm_id=G-55964DLV42')" type="button">CLICK HERE</button>
+<button onclick="mixpanel.track('Button clicked', {'page': 'home'}); window.open('https://drive.google.com/drive/folders/1U7EkFEwMrJPpAjN-4xX9VdoHWjy7340p?usp=share_link&utm_source=Google+Drive&utm_medium=Shared+link&utm_campaign=Grade+10+Streamlit&utm_id=G-55964DLV42')" type="button">CLICK HERE</button>
 '''
 
 components.html(button_html)
+
 
 #NEW CONTAINER
 with st.container():
@@ -248,6 +257,18 @@ with left_column:
 
 with right_column:
     st_lottie(motivational_lottie,height= 350, key ="website")
+
+
+
+
+
+
+#mixpannel tracking
+
+token = st.secrets["Token"]
+mp = mixpanel.Mixpanel(token='Token')
+
+
  
 #Temperature widget
 
