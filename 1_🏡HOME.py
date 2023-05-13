@@ -122,8 +122,8 @@ button {
   color: #fff;
   -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
   clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
-  height: 40px;
-  font-size: 0.7rem;
+  height: 50px;
+  font-size: 0.8rem;
   line-height: 14px;
   letter-spacing: 1.2px;
   transition: .2s .1s;
@@ -163,8 +163,8 @@ button {
   color: #fff;
   -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
   clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
-  height: 40px;
-  font-size: 0.7rem;
+  height: 50px;
+  font-size: 0.8rem;
   line-height: 14px;
   letter-spacing: 1.2px;
   transition: .2s .1s;
@@ -204,8 +204,8 @@ button {
   color: #fff;
   -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
   clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
-  height: 40px;
-  font-size: 0.7rem;
+  height: 50px;
+  font-size: 0.8rem;
   line-height: 14px;
   letter-spacing: 1.2px;
   transition: .2s .1s;
